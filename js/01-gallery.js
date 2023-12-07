@@ -45,9 +45,9 @@ function handleClick(event) {
     document.addEventListener("keydown", handleClickClose);
 
     function handleClickClose(event) {
-        if (event.key === "Escape" || event.currentTarget.nodeName !== "UL") {
+        if (event.key === "Escape" || event.currentTarget !== "UL") {
             istance.close();
-            document.removeEventListener("keydown", handleClickClose)
+            document.removeEventListener("keydown", handleClickClose);
         }
 
     }
