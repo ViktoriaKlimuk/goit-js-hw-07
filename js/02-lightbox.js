@@ -33,7 +33,8 @@ function handleClick(event) {
         <img class="gallery__item" scr="${galleryItems.original}" alt="${galleryItems.description}">
         `
     });
-    gallery.next()
+
+
 
 
 
