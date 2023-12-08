@@ -13,42 +13,8 @@ function createMarkUp(galleryItems) {
     </li>
     `).join("")
 }
-
-
-container.addEventListener("click", handleClick);
-
-function handleClick(event) {
-    event.preventDefault();
-
-    if (event.target === event.currentTarget) {
-        return
-    }
-
-    // const currentImage = event.target.closest(".gallery__link") //*//
-
-
-    let gallery = new SimpleLightbox(".gallery__item a", { captionsData: "alt", captionDelay: 250, overplayOpacity: 0.5 });
-    gallery.on("show.simpleLightbox", function () {
-        `
-        <img class="gallery__item" scr="${galleryItems.original}" alt="${galleryItems.description}">
-        `
-    });
+let gallery = new SimpleLightbox(".gallery__item a", { captionsData: "alt", captionDelay: 250, overplayOpacity: 0.5 });
 
 
 
 
-
-    document.addEventListener("keydown", handleClickClose);
-
-
-};
-
-function handleClickClose(event) {
-    if (event.key === "Escape" || event.currentTarget !== "UL") {
-        // gallery.on("close.simplelightbox", function () {
-        // });
-        document.removeEventListener("keydown", handleClickClose);
-    }
-
-}
-// console.log(galleryItems);
