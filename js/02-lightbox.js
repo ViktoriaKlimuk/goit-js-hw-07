@@ -45,9 +45,8 @@ function handleClick(event) {
 
 function handleClickClose(event) {
     if (event.key === "Escape" || event.currentTarget !== "UL") {
-        gallery.on("close.simplelightbox", function () {
-
-        });
+        // gallery.on("close.simplelightbox", function () {
+        // });
         document.removeEventListener("keydown", handleClickClose);
     }
 
